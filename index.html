@@ -1,30 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Feynman</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon"  href="assets/favicon.ico"/>
+    <meta name=”description” content="Tribute page to one of the greatest physicist of all time, Richard Feynman.">
+    <title>CURIOSITY-RICHARD FEYNMAN</title>
+    <meta http-equiv="refresh" content="128; url='home.html'" />
+    <style>
+      div{
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        background-color: black;
+        z-index: 1;
+      }
+      a{
+      opacity: 50%;
+      position: absolute;
+      display: block;
+      width: 100%;
+      margin-top: 6vh;
+      text-align: center;
+      font-size: 3vh;
+      color: white; 
+      text-decoration: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      letter-spacing: 5px;
+      }
+      #countdown{
+      position: absolute;
+      display: block;
+      width: 100%;
+      margin-top: 2vh;
+      text-align: center;
+      font-size: 3vh;
+      color: white; 
+      text-decoration: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      letter-spacing: 5px;
+      }
+      a:hover{
+        background-color: white;
+        color: black;
+      }
+    </style>
+   
 </head>
-<body id="home">
-    <main>
-        <header id="home-header">
-            <h1>Richard<br>Feynman</h1>
-            <div  id="browser-warning">
-                <p>This website works best in modern browsers.</p>
-            </div>
-        </header>
-        <nav>
-            <ul id="home-links">
-                <li class="hover-anim"><a href="life.html">Life</a></li>
-                <li class="hover-anim"><a href="#">Teachings</a></li>
-                <li class="hover-anim"><a href="#">Achievements</a></li>
-                <li class="hover-anim"><a href="#">Bibliography</a></li>
-            </ul>
-        </nav>
-        <footer id="home-footer">
-            <a href="#"><img class="hover-anim" src="assets/mylogo.svg" alt="creator's logo"></a>
-        </footer>
-    </main>
+<body style="margin: 0;">
+  <div>
+    <a href="home.html">SKIP</a><span id="countdown">10</span>
+  </div>
+  <script>
+
+var seconds = 128, $seconds = document.querySelector('#countdown');
+(function countdown() {
+    $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
+    if(seconds --> 0) setTimeout(countdown, 1000)
+})();
+ 
+  </script>
+  <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+    <iframe frameborder="0" height="100%" width="100%"
+      src="https://www.youtube.com/embed/UjEngEpiJKo/embed/ID?autoplay=1&controls=0&showinfo=0&autohide=1">
+    </iframe>
+  </div>
 </body>
 </html>
